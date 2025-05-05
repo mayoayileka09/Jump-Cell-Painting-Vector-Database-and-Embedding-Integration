@@ -1,5 +1,8 @@
 from pymilvus import connections, utility, FieldSchema, CollectionSchema, DataType, Collection
 
+# This script connects to a local Milvus instance, resets (drops and recreates) collections 
+# for ORF and CRISPR embeddings using a shared metadata schema and specified embedding dimensions.
+
 # ---- CONNECT TO MILVUS ----
 connections.connect("default", host="localhost", port="19530")
 
