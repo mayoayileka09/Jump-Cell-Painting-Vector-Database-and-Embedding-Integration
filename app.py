@@ -7,6 +7,11 @@ from Search import run_vector_search
 from Export import export_results_with_metadata
 from Plot import get_projection_figure
 
+# This is the main Streamlit app for interactive vector search on JUMP Cell Painting (JCP) data.
+# Users can select ORF or CRISPR datasets, search by gene name, run nearest neighbor searches using Milvus,
+# visualize top matches with metadata, download results (CSV/JSON), and manage saved gene lists via a folder system.
+
+
 # Connect to Milvus
 connections.connect("default", host="localhost", port="19530")
 
