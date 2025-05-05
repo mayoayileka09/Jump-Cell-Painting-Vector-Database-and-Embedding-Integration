@@ -2,6 +2,11 @@ import pandas as pd
 import polars as pl
 from broad_babel.query import run_query
 
+# This script defines a function to enrich a Parquet file with 'pert_type' and 'name' fields
+# by querying Babel metadata using unique Metadata_JCP2022 IDs.
+# It uses Polars for transformation and saves the enriched output back to a new Parquet file.
+
+
 def enrich_with_babel(input_path: str, output_path: str):
     '''
     Enrich a raw .parquet file with 'pert_type' and 'name' using Babel metadata.
