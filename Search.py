@@ -3,6 +3,8 @@ import pandas as pd
 from Export import export_results_with_metadata
 
 
+# This script connects to a Milvus collection, selects a query vector from the ORF dataset,
+# performs a top-k vector similarity search, and optionally exports the search results with metadata to a JSON file.
 
 
 def run_vector_search(collection, query_vector, k, output_fields=None):
