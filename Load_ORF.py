@@ -2,6 +2,10 @@ from pymilvus import connections, utility, FieldSchema, CollectionSchema, DataTy
 import pandas as pd
 from enrichment import enrich_with_babel
 
+# This script enriches ORF match data using Babel, prepares a Milvus collection with the appropriate schema,
+# inserts the enriched data in batches, and builds an index for L2-based similarity search on the embedding vectors.
+
+
 # --- Config ---
 collection_name = "orf_embeddings"
 input_path = "/Users/user/Desktop/INFO 602/JCP/Matches/ORF_Matches.parquet"
