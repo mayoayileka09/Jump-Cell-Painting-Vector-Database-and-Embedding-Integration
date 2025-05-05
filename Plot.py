@@ -4,6 +4,11 @@ import plotly.express as px
 from sklearn.decomposition import PCA
 from umap import UMAP
 
+# This script loads ORF and CRISPR embedding data, cleans and combines them,
+# and applies dimensionality reduction (PCA) to project the data into 2D.
+# It highlights a query point and top-k matches in an interactive Plotly scatter plot for visualization.
+
+
 def get_projection_figure(method="PCA", query_id=None, top_k_ids=None):
     # Load datasets
     orf_df = pd.read_parquet("/Users/user/Desktop/INFO 602/JCP/Matches/ORF_Matches_enriched.parquet")
