@@ -1,5 +1,11 @@
 import json
 
+# This script defines a function to export Milvus search results,
+# including selected metadata fields, to a structured JSON file.
+# It is designed to save the top-k search results with distances and metadata.
+
+
+
 def export_results_with_metadata(results, original_df, metadata_fields, filename="results.json"):
     """
     Export search results with metadata into a JSON file.
