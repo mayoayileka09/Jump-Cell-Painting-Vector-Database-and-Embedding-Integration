@@ -2,6 +2,9 @@ import pandas as pd
 import requests
 import time
 
+# This script queries the Ensembl REST API to fetch metadata (e.g., Ensembl ID, description, biotype)
+# for unique gene names from the ORF dataset. The results are saved to a CSV file for use in downstream enrichment.
+
 # Load gene names from ORF dataset
 df = pd.read_parquet("/Users/user/Desktop/INFO 602/JCP/Matches/ORF_Matches_enriched.parquet")
 gene_names = sorted(df["name"].dropna().unique())
