@@ -2,6 +2,11 @@ from pymilvus import connections, utility, FieldSchema, CollectionSchema, DataTy
 import pandas as pd
 from enrichment import enrich_with_babel
 
+# This script enriches CRISPR match data with metadata using Babel, 
+# then creates and populates a Milvus collection with the enriched embeddings.
+# It configures the schema, inserts the data, and builds a vector index for similarity search.
+
+
 # --- Configuration ---
 collection_name = "crispr_embeddings"
 input_path = "/Users/user/Desktop/INFO 602/JCP/Matches/CRISPR_Matches.parquet"
