@@ -1,5 +1,9 @@
 import pandas as pd
 
+# This script enriches ORF and CRISPR match datasets with gene annotations
+# by merging them with a metadata CSV file on the "name" column.
+# The resulting files are saved as new Parquet files.
+
 # Load metadata
 meta_df = pd.read_csv("/Users/user/Desktop/gene_annotations.csv")
 
